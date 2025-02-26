@@ -1,5 +1,3 @@
-# Titanic Survival Prediction - Custom Student Version
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -9,8 +7,8 @@ from sklearn.preprocessing import MinMaxScaler, LabelEncoder
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
-# Load dataset
-dataset_path = "Titanic-Dataset.csv"
+# Load  the dataset
+dataset_path = r"C:\Users\Arunesh_27\Documents\CODSOFT\Task1_Titanic_Survival_Prediction\Titanic-Dataset.csv"
 
 try:
     df = pd.read_csv(dataset_path)
@@ -19,11 +17,11 @@ except FileNotFoundError:
     print(f"❌ Error: {dataset_path} not found. Please check the file path.")
     exit()
 
-# Display basic info about dataset
+# Display basic info about the dataset
 print("\nDataset Overview:")
 print(df.info())
 
-# Drop irrelevant columns (custom selection)
+# Drop irrelevant columns 
 df.drop(["Ticket", "Cabin"], axis=1, inplace=True)
 
 # Fill missing values with custom logic
@@ -31,12 +29,12 @@ df["Age"].fillna(df["Age"].median(), inplace=True)
 df["Embarked"].fillna("U", inplace=True)  # 'U' stands for Unknown
 df["Fare"].fillna(df["Fare"].median(), inplace=True)
 
-# Encode categorical variables (unique encoding)
+# Encode categorical variables 
 encoder = LabelEncoder()
 df["Sex"] = df["Sex"].map({"male": 1, "female": 0})  # Custom mapping
 df["Embarked"] = encoder.fit_transform(df["Embarked"])
 
-# Create a new feature: Family Size (Unique Feature Engineering)
+# Create a new feature: Family Size 
 df["Family_Size"] = df["SibSp"] + df["Parch"] + 1  # Including self
 
 # Drop Name column since it's text-based
@@ -46,15 +44,15 @@ df.drop("Name", axis=1, inplace=True)
 X = df.drop("Survived", axis=1)
 y = df["Survived"]
 
-# Splitting into training and testing sets (70-30 split instead of 80-20)
+# Splitting into training and testing sets 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=7)
 
-# Feature scaling using MinMaxScaler instead of StandardScaler (Unique Choice)
+# Feature scaling using MinMaxScaler instead of StandardScaler
 scaler = MinMaxScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Train a Logistic Regression model (Simple but effective)
+# Train a Logistic Regression model
 model = LogisticRegression()
 model.fit(X_train, y_train)
 
@@ -74,7 +72,7 @@ plt.xlabel("Predicted")
 plt.ylabel("Actual")
 plt.show()
 
-# Data Visualization: Family Size vs Survival Rate (Unique Analysis)
+# Data Visualization: Family Size vs Survival Rate 
 plt.figure(figsize=(6, 4))
 sns.barplot(x=df["Family_Size"], y=df["Survived"], ci=None, palette="magma")
 plt.title("Survival Rate Based on Family Size")
