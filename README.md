@@ -48,7 +48,7 @@ Before running the script, install required libraries:
  in sh
 pip install pandas numpy seaborn matplotlib scikit-learn
 
----
+--- 
 
 ## 📌 Task 2: Movie Rating Prediction - CodSoft Internship Task 2
 
