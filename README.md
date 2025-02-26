@@ -3,7 +3,7 @@ This repository contains all my Codsoft Internship projects.
 # 🚀 CodSoft Internship - Data Science Tasks
 
 
-## 📌 Task 1: Titanic Survival Prediction  
+## 📌 Titanic Survival Prediction - CodSoft Internship Task 1  
 
 # 🚢 Titanic Survival Prediction
 
@@ -50,7 +50,7 @@ pip install pandas numpy seaborn matplotlib scikit-learn
 
 --- 
 
-## 📌 Task 2: Movie Rating Prediction - CodSoft Internship Task 2
+## 📌 Movie Rating Prediction - CodSoft Internship Task 2
 
 🎬 This is my second project in **CodSoft Data Science Internship**, where I built a Machine Learning model to **predict IMDb movie ratings** based on factors like **genre, director, and actors.**  
 
