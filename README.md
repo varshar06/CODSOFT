@@ -88,6 +88,47 @@ The dataset **IMDb Movies India.csv** contains:
 
 ### **🔹 Step 1: Install Dependencies**  
 Before running the script, install the required libraries:  
+sh
+pip install pandas numpy seaborn matplotlib scikit-learn
+
+# 🌸 Iris Flower Classification - CodSoft Internship Task 3  
+
+This is the third project of my **CodSoft Data Science Internship**, where I built a Machine Learning model to **classify Iris flowers** into three species:  
+✅ **Setosa**  
+✅ **Versicolor**  
+✅ **Virginica**  
+
+## 📂 Project Structure  
+
+📁 Task3_Iris_Classification
+├── 📄 IRIS.csv (Dataset)
+├── 📄 iris_classification.py (Python Script)
+├── 📄 README.md (Project Documentation)
+
+---
+
+## 📊 Features & Enhancements  
+✅ **Uses Logistic Regression** for classification  
+✅ **Encodes categorical labels (species) for ML processing**  
+✅ **Handles missing values & scales features for better performance**  
+✅ **Visualizations: Confusion Matrix & Sepal Length vs Width Scatter Plot**  
+
+---
+
+## 📂 Dataset Information  
+The dataset **IRIS.csv** contains:  
+- `sepal_length` – Sepal length in cm  
+- `sepal_width` – Sepal width in cm  
+- `petal_length` – Petal length in cm  
+- `petal_width` – Petal width in cm  
+- `species` – Flower species (Setosa, Versicolor, Virginica)  
+
+---
+
+## 🛠 Setup & Installation  
+
+### **🔹 Step 1: Install Dependencies**  
+Before running the script, install the required libraries:  
 ```sh
 pip install pandas numpy seaborn matplotlib scikit-learn
 
