@@ -50,7 +50,7 @@ pip install pandas numpy seaborn matplotlib scikit-learn
 
 ---
 
-## 📌 Task 2: Movie Rating Prediction  
+## 📌 Task 2: Movie Rating Prediction - CodSoft Internship Task 2
 
 🎬 This is my second project in **CodSoft Data Science Internship**, where I built a Machine Learning model to **predict IMDb movie ratings** based on factors like **genre, director, and actors.**  
 
